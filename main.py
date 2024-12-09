@@ -138,6 +138,7 @@ async def ask_question(request: AskModel, db: Session = Depends(get_db)):
             f"You are an assistant designed to provide accurate and helpful responses strictly based on the given context. "
             f"If a user's question is not addressed by the provided context, respond with: "
             f"`I'm sorry, I don't have relevant information on that!` "
+            f"Do not mention that you have been provided with the context."
             f"Here is the context for your responses: {context}"
         )
 
